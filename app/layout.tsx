@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className={cn("font-sans antialiased", inter.variable)}>
       <body className="bg-background min-h-screen">
         <ClerkProvider 
-          appearance={{ theme: shadcn }}
+          appearance={{ baseTheme: shadcn }}
           afterSignInUrl="/dashboard"
           afterSignUpUrl="/dashboard"
         >

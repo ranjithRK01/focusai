@@ -18,7 +18,6 @@ const config: Config = {
           foreground: "#FFFFFF",
         },
         success: "#10B981",
-        secondary: "#64748B",
         card: {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
@@ -31,17 +30,9 @@ const config: Config = {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
         },
-        secondary: {
-          DEFAULT: "var(--secondary)",
-          foreground: "var(--secondary-foreground)",
-        },
         muted: {
           DEFAULT: "var(--muted)",
           foreground: "var(--muted-foreground)",
-        },
-        accent: {
-          DEFAULT: "var(--accent)",
-          foreground: "var(--accent-foreground)",
         },
         destructive: {
           DEFAULT: "var(--destructive)",
@@ -50,7 +41,7 @@ const config: Config = {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
-        success: {
+        successColor: {
           DEFAULT: "var(--success)",
           foreground: "#FFFFFF",
         },
