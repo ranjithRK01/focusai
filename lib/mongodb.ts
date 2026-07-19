@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 
 const MONGO_URI = process.env.MONGO_URI || '';
+const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build';
 
-if (!MONGO_URI) {
-  throw new Error('Please define the MONGO_URI environment variable inside .env.local');
+if (!MONGO_URI && !isBuildPhase) {
+  console.warn('MONGO_URI is not set. Database-backed routes will return errors until it is configured.');
 }
 
 let cached = (global as any).mongoose;
@@ -13,6 +14,14 @@ if (!cached) {
 }
 
 async function connectDB() {
+  if (!MONGO_URI) {
+    if (isBuildPhase) {
+      return null;
+    }
+
+    throw new Error('Please define the MONGO_URI environment variable inside .env.local');
+  }
+
   if (cached.conn) {
     return cached.conn;
   }

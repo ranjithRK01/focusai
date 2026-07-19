@@ -5,6 +5,8 @@ import Goal from '@/models/Goal';
 import User from '@/models/User';
 import type { Goal as GoalType } from '@/types';
 
+export const dynamic = 'force-dynamic';
+
 // GET /api/goals - Get user's goals (active first)
 export async function GET(req: NextRequest) {
   try {
