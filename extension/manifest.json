@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "FocusAI",
+  "version": "1.0.0",
+  "description": "Stay focused on your goals with AI-powered YouTube tracking",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "notifications",
+    "alarms",
+    "identity",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "http://localhost:3000/*",
+    "http://localhost:3002/*"
+  ],
+  "background": {
+    "service_worker": "background/index.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content/index.js"],
+      "css": ["content/index.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "FocusAI"
+  },
+  "options_page": "options.html"
+}
