@@ -99,7 +99,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Today's Win Card (Hero) */}
-          <div className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white rounded-2xl p-5 shadow-xl" style={{ maxHeight: '260px' }}>
+          <div className="bg-gray-900 text-white rounded-2xl p-5 shadow-xl" style={{ maxHeight: '260px' }}>
             <div className="flex items-center gap-3 mb-6">
               <span className="text-3xl">🏆</span>
               <p className="text-lg font-bold">TODAY</p>
@@ -136,21 +136,21 @@ export default function DashboardPage() {
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <span className="text-lg">⏱️</span>
-                <p className="text-3xl font-bold text-emerald-600">{weekTimeSaved}</p>
+                <p className="text-3xl font-bold text-gray-900">{weekTimeSaved}</p>
               </div>
               <p className="text-xs text-gray-500">mins saved</p>
             </div>
             <div className="text-center border-l border-r border-gray-100">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <span className="text-lg">✅</span>
-                <p className="text-3xl font-bold text-blue-600">{weekProductiveVideos}</p>
+                <p className="text-3xl font-bold text-gray-900">{weekProductiveVideos}</p>
               </div>
               <p className="text-xs text-gray-500">productive</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <span className="text-lg">🚫</span>
-                <p className="text-3xl font-bold text-red-500">{weekDistractionsAvoided}</p>
+                <p className="text-3xl font-bold text-gray-900">{weekDistractionsAvoided}</p>
               </div>
               <p className="text-xs text-gray-500">avoided</p>
             </div>
@@ -182,13 +182,13 @@ export default function DashboardPage() {
 
         {/* 4. Quick Actions Row */}
         <div className="flex flex-wrap gap-4">
-          <a href="/dashboard/history" className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-semibold py-3 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-200" style={{ height: '50px' }}>
+          <a href="/dashboard/history" className="inline-flex items-center justify-center bg-gray-900 text-white font-semibold py-3 px-8 rounded-xl shadow-md hover:bg-gray-800 transition-all duration-200" style={{ height: '50px' }}>
             Continue Learning
           </a>
-          <a href="/dashboard/reviews" className="inline-flex items-center justify-center bg-white border-2 border-gray-200 hover:border-blue-600 text-gray-900 font-semibold py-3 px-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-200" style={{ height: '50px' }}>
+          <a href="/dashboard/reviews" className="inline-flex items-center justify-center bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-200" style={{ height: '50px' }}>
             Review Videos
           </a>
-          <a href="/dashboard/goals" className="inline-flex items-center justify-center bg-white border-2 border-gray-200 hover:border-blue-600 text-gray-900 font-semibold py-3 px-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-200" style={{ height: '50px' }}>
+          <a href="/dashboard/goals" className="inline-flex items-center justify-center bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-200" style={{ height: '50px' }}>
             Change Goal
           </a>
         </div>
